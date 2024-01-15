@@ -7,9 +7,7 @@ export default function MainCenter() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const response = await fetch(
-          "https://apidesafio-dev-qqar.1.us-1.fl0.io"
-        );
+        const response = await fetch("http://localhost:3003/posts/");
         const data = await response.json();
         setPosts(data.data);
       } catch (error) {

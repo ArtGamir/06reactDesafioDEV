@@ -211,34 +211,34 @@ export default function AsideLeft() {
 
       <div className="w-64 p-2">
         <div className="bg-white rounded-md w-64p-2">
-          <p class="d-flex">DEV community</p>
+          <p>DEV community</p>
 
           <img
             src="https://res.cloudinary.com/practicaldev/image/fetch/s--GkDXbK0b--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oky7tpxe4z0f8ksng5ta.png"
             className="p-5 rounded-md"
           />
-          <p class="card-title">
+          <p>
             Life is too short to browse without <span>dark mode</span>.
           </p>
-          <p class="card__text">
+          <p>
             You can customize your theme, font, and more{" "}
             <span>when you are signed in.</span>
           </p>
         </div>
 
-        <div class="card footer__text tags__item">
-          <div class="card-body">
-            <p class="card-footer__text">
+        <div>
+          <div>
+            <p>
               <span>DEV community</span> A constructive and inclusive social
               network for software developers. With you every step of your
               journey.
             </p>
-            <p class="card-footer__text">
+            <p>
               Built on<span>Forem</span> — the <span>open source</span> software
               that powers
               <span>DEV</span> and other inclusive communities.
             </p>
-            <p class="card-footer__text">
+            <p>
               Made with love and <span>Ruby on Rails</span> DEV Community © 2016
               - 2023.
             </p>
