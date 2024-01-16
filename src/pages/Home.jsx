@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="bg-gray-200 h-full">
       <NavBar />
-      <div className="flex place-content-around">
+      <div className="flex place-content-around gap-5">
         <AsideLeft />
         <MainCenter />
         <AsideRight />

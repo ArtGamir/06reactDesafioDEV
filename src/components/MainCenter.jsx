@@ -5,20 +5,15 @@ export default function MainCenter() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const getPosts = async () => {
-      try {
-        const response = await fetch("http://localhost:3003/posts/");
-        const data = await response.json();
+    fetch("http://localhost:3003/posts")
+      .then((response) => response.json())
+      .then((data) => {
         setPosts(data.data);
-      } catch (error) {
-        console.error("Error fetching posts:", error);
-      }
-    };
-    getPosts();
+      });
   }, []);
 
   return (
-    <main className="bg-blue-500">
+    <main className="w-2/3">
       <ul className="flex gap-2 items-start">
         <li>
           <a>Relevant</a>
@@ -30,7 +25,7 @@ export default function MainCenter() {
           <a>Top</a>
         </li>
       </ul>
-      <section>
+      <section className="grid gap-y-4">
         {posts.map((post) => {
           return (
             <article key={`prod-${post.id}`} className="bg-white rounded-md">

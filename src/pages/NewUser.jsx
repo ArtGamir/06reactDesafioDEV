@@ -1,3 +1,5 @@
+import NewUserForm from "../components/NewUserForm";
+
 export default function NewUser() {
-  return <h1>NewUser</h1>;
+  return <NewUserForm />;
 }
