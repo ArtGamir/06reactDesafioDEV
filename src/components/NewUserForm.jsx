@@ -113,7 +113,7 @@ export default function NewUserForm() {
           className={clsx(
             "border border-black p-2 rounded bg-white",
             "flex h-8 justify-center items-center p-5 m-2 w-full",
-            "bg-blue-700 text-white"
+            "bg-blue-700 text-blue-700"
           )}
           type="button"
           id="signUp_button"

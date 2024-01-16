@@ -30,10 +30,11 @@ export default function MainCenter() {
           return (
             <article key={`prod-${post.id}`} className="bg-white rounded-md">
               <img src={post.url} alt={post.title} />
-              <h3 className="font-bold">{post.title}</h3>
+              <Link to={`/post/${post.id}`}>
+                <h3 className="font-bold">{post.title}</h3>
+              </Link>
               <p>{post.description}</p>
               <p>{post.tags}</p>
-              <Link to={`/post/${post.id}`}></Link>
             </article>
           );
         })}
