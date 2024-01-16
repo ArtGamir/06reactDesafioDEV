@@ -71,12 +71,12 @@ export default function LoginForm() {
         <p>OR</p>
       </div>
 
-      <div>
+      <div className="w-1/3">
         <label>Email</label>
         <input
           className={clsx(
             "border border-black p-2 rounded bg-white",
-            "flex h-8 justify-center items-center p-5 m-2"
+            "flex h-8 w-full justify-center items-center p-5 m-2"
           )}
           type="email"
           id="userEmail"
@@ -84,12 +84,12 @@ export default function LoginForm() {
           required
         />
       </div>
-      <div>
+      <div className="w-1/3">
         <label for="exampleFormControlTextarea1">Password</label>
         <input
           className={clsx(
             "border border-black p-2 rounded bg-white",
-            "flex h-8 justify-center items-center p-5 m-2"
+            "flex h-8 w-full justify-center items-center p-5 m-2"
           )}
           type="password"
           id="userPassword"
@@ -97,19 +97,23 @@ export default function LoginForm() {
           required
         />
       </div>
-      <div>
-        <input type="checkbox" value="" id="flexCheckDefault" />
-        <label for="flexCheckDefault">Remember me</label>
-        <p>
-          <a href="#">Forgot password?</a>
-        </p>
+      <div className="flex space-x-60">
+        <span>
+          <input type="checkbox" value="" id="flexCheckDefault" />
+          <label for="flexCheckDefault">Remember me</label>
+        </span>
+        <span>
+          <p>
+            <a href="#">Forgot password?</a>
+          </p>
+        </span>
       </div>
-      <div>
+      <div className="w-1/3">
         <button
           className={clsx(
-            "border border-black p-2 rounded bg-white",
+            "border border-black p-2 rounded",
             "flex h-8 justify-center items-center p-5 m-2 w-full",
-            "bg-blue-700 text-white"
+            "bg-blue-700  text-white"
           )}
           type="button"
           id="login_button"
