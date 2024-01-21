@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
-import NewUser from "./pages/NewUser";
+import NewUser from "./pages/CreateAccount";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
 import NewPost from "./pages/NewPost";
