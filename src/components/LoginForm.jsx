@@ -107,7 +107,7 @@ export default function LoginForm() {
       <div>
         <button
           className={clsx(
-            "border border-black p-2 rounded bg-white",
+            " p-2 rounded ",
             "flex h-8 justify-center items-center p-5 m-2 w-full",
             "bg-blue-700 text-white"
           )}

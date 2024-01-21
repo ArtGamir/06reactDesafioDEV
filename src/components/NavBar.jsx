@@ -33,12 +33,12 @@ export default function NavBar() {
       <div>
         <div>
           <span>
-            <Link to="/Login">Log in</Link>
+            <Link className={clsx(" p-2 rounded rounded-md underline-offset-1","hover:bg-blue-100 hover:text-blue-700 hover:underline")} to="/Login">Log in</Link>
           </span>
 
           <Link
             to="/NewUser"
-            className="border border-blue-500 text-blue-500  font-bold rounded p-2 m-6"
+            className={clsx("border border-blue-500 text-blue-500  font-bold rounded p-2 m-6", " p-2 rounded rounded-md underline-offset-1","hover:bg-blue-700 hover:text-white hover:underline")}
           >
             Create account
           </Link>
