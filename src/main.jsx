@@ -7,13 +7,16 @@ import NewUser from "./pages/CreateAccount";
 import Login from "./pages/Login";
 import Post from "./pages/Post";
 import NewPost from "./pages/NewPost";
+import MainScreen from "./pages/MainScreen";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    children: [{ path: "/Post", element: <Post /> }],
+    children: [{ path: "/MainScreen", element: <MainScreen /> }],
   },
+  ,
+  { path: "/Post", element: <Post /> },
   { path: "/NewUser", element: <NewUser /> },
   { path: "/Login", element: <Login /> },
   { path: "/NewPost", element: <NewPost /> },

@@ -1,6 +1,6 @@
 export default function AsideRight() {
   return (
-    <aside>
+    <aside className="mr-32">
       <div className="bg-white rounded-md w-64 p-2">
         <section>
           <div class="card">

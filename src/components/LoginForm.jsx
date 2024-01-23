@@ -16,7 +16,7 @@ export default function LoginForm() {
 
   async function onSubmit(inputData) {
     try {
-      const response = await fetch("http://localhost:3003/users", {
+      const response = await fetch("http://localhost:3003/auth/login", {
         method: "POST",
         body: JSON.stringify({
           email: inputData.email,

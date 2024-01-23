@@ -1,7 +1,11 @@
+import NavBar from "../components/NavBar";
+import PostCard from "../components/PostCard";
+
 export default function Post() {
   return (
-    <div>
-      <h1>post</h1>
-    </div>
+    <main>
+      <NavBar />
+      <PostCard />
+    </main>
   );
 }
