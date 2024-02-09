@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Post from "../pages/Post";
+import PostDetail from "../pages/PostDetail";
 
 export default function Center() {
   const [posts, setPosts] = useState([]);
@@ -31,7 +31,9 @@ export default function Center() {
           return (
             <article key={`${post._id}`} className="w-full bg-white rounded-md">
               {console.log(`${post._id}`)}
-              <img src={post.url} alt={post.title} className="rounded-md" />
+              <Link to={`/PostDetail/${post._id}`}>
+                <img src={post.url} alt={post.title} className="rounded-md" />
+              </Link>
               <div className="flex p-5">
                 <img src={post.picture} className="rounded-full w-12" />
                 <div>
@@ -40,7 +42,7 @@ export default function Center() {
                 </div>
               </div>
               <div className="p-5">
-                <Link to={`/Post/${post._id}`}>
+                <Link to={`/PostDetail/${post._id}`}>
                   <h3 className="text-2xl font-bold">{post.title}</h3>
                 </Link>
                 <p>#{post.tags.join(" #")}</p>

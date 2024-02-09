@@ -6,7 +6,7 @@ export default function PostCard() {
   const [post, setPost] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3003/Post/${_id}`)
+    fetch(`http://localhost:3003/posts/${_id}`)
       .then((response) => response.json())
       .then((data) => {
         setPost(data);

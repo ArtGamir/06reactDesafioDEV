@@ -170,7 +170,6 @@ export default function LoginForm() {
             "hover:bg-blue-800"
           )}
           type="submit"
-          id="login_button"
         >
           Log in
         </button>
