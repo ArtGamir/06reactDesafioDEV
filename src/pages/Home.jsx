@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar";
 import MainScreen from "./MainScreen";
-import Post from "./Post";
+import Post from "./PostDetail";
 
 export default function Home() {
   return (

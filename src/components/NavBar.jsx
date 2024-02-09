@@ -5,6 +5,12 @@ import { useState, useEffect } from "react";
 export default function NavBar() {
   const [isLogedin, setIsLogedin] = useState(false);
 
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   useEffect(() => {
     const token = window.localStorage.getItem("token");
     if (token) {
@@ -47,7 +53,7 @@ export default function NavBar() {
             <span>
               <Link
                 className={clsx(
-                  " p-2 rounded rounded-md underline-offset-1",
+                  " p-2 rounded rounded-md underline",
                   "hover:bg-blue-100 hover:text-blue-700 hover:underline"
                 )}
                 to="/Login"
@@ -60,7 +66,7 @@ export default function NavBar() {
               to="/NewUser"
               className={clsx(
                 "border border-blue-500 text-blue-500  font-bold rounded p-2 m-6",
-                " p-2 rounded rounded-md underline-offset-1",
+                " p-2 rounded rounded-md underline",
                 "hover:bg-blue-700 hover:text-white hover:underline"
               )}
             >
@@ -75,17 +81,51 @@ export default function NavBar() {
             to="/NewPost"
             className={clsx(
               "border border-blue-500 text-blue-500  font-bold rounded p-2 m-6",
-              " p-2 rounded rounded-md underline-offset-1",
+              " p-2 rounded rounded-md underline",
               "hover:bg-blue-700 hover:text-white hover:underline"
             )}
           >
             Create Post
           </Link>
-          <span>
-            <img
-              src="https://aohospital.com.pk/wp-content/uploads/2020/02/empty-doc-pic.png"
-              className="w-10"
-            />
+
+          <span className="relative inline-block ">
+            <button onClick={toggleMenu}>
+              <img
+                src="https://aohospital.com.pk/wp-content/uploads/2020/02/empty-doc-pic.png"
+                className="w-10"
+              />
+            </button>
+            {menuVisible && (
+              <ul className="bg-white absolute  rounded-lg border border-black right-0">
+                <li className="block">
+                  <a
+                    id=""
+                    href="#"
+                    className="block w-60 p-2 hover:bg-indigo-200 hover:text-blue-600 hover:underline"
+                  >
+                    user name
+                  </a>
+                </li>
+                <li className="block p-2 hover:bg-indigo-200 hover:text-blue-600 hover:underline">
+                  <a id="" href="#">
+                    Dashboard
+                  </a>
+                </li>
+                <li className="block p-2 hover:bg-indigo-200 hover:text-blue-600 hover:underline">
+                  <a id="" href="#">
+                    Reading list
+                  </a>
+                </li>
+                <li className="block p-2 hover:bg-indigo-200 hover:text-blue-600 hover:underline">
+                  <a id="" href="#">
+                    Settings
+                  </a>
+                </li>
+                <li className="block p-2 hover:bg-indigo-200 hover:text-blue-600 hover:underline">
+                  <Link to="/Logout">Sign Out</Link>
+                </li>
+              </ul>
+            )}
           </span>
         </div>
       )}
